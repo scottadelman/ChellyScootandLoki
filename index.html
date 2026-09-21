@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chelsea &amp; Scott | Engagement Party</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital@0;1&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- PASSWORD SCREEN -->
+  <div id="lock">
+    <form id="lock-form" class="frame">
+      <h1 class="lock-title">Chelsea &amp; Scott</h1>
+      <p>Enter the password from your invitation.</p>
+      <input type="password" id="password" placeholder="Password"
+             autocomplete="off" autocapitalize="off" autofocus>
+      <button type="submit">Enter</button>
+      <p id="error" class="error" hidden>That password didn't work. Check your invitation and try again.</p>
+    </form>
+  </div>
+
+  <!-- PARTY PAGE (shown after the correct password) -->
+  <main id="party" hidden>
+    <div class="frame">
+
+      <p class="intro">Please join us to celebrate the engagement of</p>
+      <h1 class="names">Chelsea <span>&amp;</span> Scott</h1>
+
+      <div class="details">
+
+        <div class="detail">
+          <h2>When</h2>
+          <p>Saturday, November 7th, 2026<br>3pm to 8pm</p>
+        </div>
+
+        <div class="detail">
+          <h2>Where</h2>
+          <p>The Nachamie Residence<br>70 Murray Ave<br>Port Washington, NY, 11070</p>
+          <p><a href="https://maps.app.goo.gl/pjDZHHC76GxSuRhX9" target="_blank">Open in Maps</a></p>
+        </div>
+
+        <div class="detail">
+          <h2>Dress code</h2>
+          <p>Smart Casual</p>
+        </div>
+
+        <div class="detail">
+          <h2>RSVP</h2>
+          <p>Please reply by 10/17/2026.</p>
+          <!-- Paste your Google Form link below -->
+          <p><a class="rsvp-button" href="https://docs.google.com/forms/d/e/1FAIpQLSeDOLjuDMo-cBlj2_N9VbxOuso5yf7UawFf1ypevaI79quPOg/viewform?usp=publish-editor" target="_blank">RSVP</a></p>
+        </div>
+
+        <div class="detail">
+          <h2>Good to know</h2>
+          <p>There is plenty of street parking, please just be mindful of people's driveways. <br>
+            Food and drinks will be provided, looking forward to seeing you!
+          </p>
+        </div>
+
+      </div>
+
+      <p class="closing">We can't wait to celebrate with you.</p>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

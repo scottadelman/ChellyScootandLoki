@@ -1,0 +1,155 @@
+/* ===== EDIT COLORS AND FONTS HERE ===== */
+:root {
+  --bg: #f0ead6;         /* eggshell background */
+  --text: #1f3d33;       /* deep green text */
+  --accent: #7f6129;     /* antique gold borders, headings, button */
+  --soft: #56695e;       /* muted green for smaller text */
+  --display: "Bodoni Moda", Georgia, serif;
+  --body: "Jost", Arial, sans-serif;
+}
+
+/* ===== BASICS ===== */
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--body);
+  font-weight: 300;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+h1, h2 {
+  font-family: var(--display);
+  font-weight: 400;
+  margin: 0;
+}
+
+a { color: var(--accent); }
+
+/* Invitation-style double border, used on both screens */
+.frame {
+  border: 1px solid var(--accent);
+  outline: 1px solid var(--accent);
+  outline-offset: 6px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+/* ===== PASSWORD SCREEN ===== */
+#lock {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+#lock-form {
+  width: 100%;
+  max-width: 380px;
+  padding: 40px 28px;
+}
+
+.lock-title {
+  font-size: 2.2rem;
+  margin-bottom: 8px;
+}
+
+#lock-form p { color: var(--soft); margin: 0; }
+
+input {
+  width: 100%;
+  margin: 24px 0 16px;
+  padding: 12px;
+  font: inherit;
+  font-size: 1rem; /* 16px stops iPhones from zooming in */
+  text-align: center;
+  color: var(--text);
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--accent);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  font: inherit;
+  font-weight: 500;
+  color: var(--bg);
+  background: var(--accent);
+  border: none;
+  cursor: pointer;
+}
+
+input:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--text);
+  outline-offset: 3px;
+}
+
+#lock-form .error {
+  color: #f0b4a8;
+  font-size: 0.95rem;
+  margin-top: 16px;
+}
+
+/* ===== PARTY PAGE ===== */
+main { padding: 48px 20px; }
+
+main .frame {
+  max-width: 620px;
+  padding: 56px 32px;
+}
+
+.intro {
+  color: var(--soft);
+  margin: 0 0 16px;
+}
+
+.names {
+  font-size: clamp(2.8rem, 11vw, 4.5rem);
+  line-height: 1.1;
+}
+
+.names span {
+  display: block;
+  font-style: italic;
+  font-size: 0.6em;
+}
+
+.details { margin: 48px 0; }
+
+.detail {
+  padding: 24px 0;
+  border-top: 1px solid rgba(217, 192, 140, 0.35);
+}
+
+.detail h2 {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+
+.detail p { margin: 0 0 6px; }
+
+.closing {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+/* ===== RSVP BUTTON ===== */
+.rsvp-button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 10px 28px;
+  color: var(--bg);
+  background: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
