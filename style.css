@@ -190,7 +190,7 @@ main .frame {
 
 /* negative right margin cancels the extra letter spacing after the last letter,
    so the lines beside the date sit exactly at the edges of NOVEMBER */
-.detail .date-month { margin: 6px -0.22em 8px 0; padding: 0 4px; } /* padding = space between NOVEMBER and each line */
+.detail .date-month { margin: 6px -0.22em 8px 0; padding: 0 24px; } /* padding = space between NOVEMBER and each line */
 .detail .date-year { margin: 8px -0.22em 0 0; }
 
 .date-row {
@@ -247,7 +247,10 @@ main .frame {
   .detail .date-year { font-size: 0.8rem; letter-spacing: 0.14em; }
   .detail .date-month,
   .detail .date-year { margin-right: -0.14em; }
-  .date-side:first-child { padding-right: 12px; margin-right: -0.14em; }
-  .date-side:last-child { padding-left: 12px; }
+  .detail .date-month { padding: 0 16px; } /* 24px doesn't fit on narrow phones */
+  .date-row { margin: 0 -16px; } /* borrow some of the card's side padding for the date */
+  .detail .date-side { font-size: 0.75rem; letter-spacing: 0.1em; }
+  .date-side:first-child { padding-right: 10px; margin-right: -0.1em; }
+  .date-side:last-child { padding-left: 10px; }
   .detail .date-day { font-size: 3rem; padding: 8px 16px; }
 }
