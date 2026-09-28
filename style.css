@@ -190,7 +190,7 @@ main .frame {
 
 /* negative right margin cancels the extra letter spacing after the last letter,
    so the lines beside the date sit exactly at the edges of NOVEMBER */
-.detail .date-month { margin: 6px -0.22em 8px 0; }
+.detail .date-month { margin: 6px -0.22em 8px 0; padding: 0 4px; } /* padding = space between NOVEMBER and each line */
 .detail .date-year { margin: 8px -0.22em 0 0; }
 
 .date-row {
