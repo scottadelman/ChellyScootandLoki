@@ -188,17 +188,23 @@ main .frame {
   margin: 0;
 }
 
-.detail .date-month { margin: 6px 0 8px; }
-.detail .date-year { margin-top: 8px; }
+/* negative right margin cancels the extra letter spacing after the last letter,
+   so the lines beside the date sit exactly at the edges of NOVEMBER */
+.detail .date-month { margin: 6px -0.22em 8px 0; }
+.detail .date-year { margin: 8px -0.22em 0 0; }
 
 .date-row {
   display: grid;
-  grid-template-columns: 1fr auto 1fr; /* keeps the big date exactly centered */
+  grid-template-columns: 1fr auto 1fr; /* middle column is as wide as the month, so the lines match it */
   align-items: center;
 }
 
-.date-side:first-child { text-align: right; padding-right: 20px; margin-right: -0.22em; }
-.date-side:last-child { text-align: left; padding-left: 20px; }
+.date-month { grid-area: 1 / 2; }
+.date-day { grid-area: 2 / 2; }
+.date-year { grid-area: 3 / 2; }
+
+.date-side:first-child { grid-area: 2 / 1; text-align: right; padding-right: 20px; margin-right: -0.22em; }
+.date-side:last-child { grid-area: 2 / 3; text-align: left; padding-left: 20px; }
 
 .detail .date-day {
   font-family: var(--display);
@@ -236,7 +242,11 @@ main .frame {
 @media (max-width: 480px) {
   main, #lock { padding-left: 32px; padding-right: 32px; }
   main .frame, #lock-form { padding-left: 22px; padding-right: 22px; }
-  .detail .date-side { font-size: 0.8rem; letter-spacing: 0.14em; }
+  .detail .date-side,
+  .detail .date-month,
+  .detail .date-year { font-size: 0.8rem; letter-spacing: 0.14em; }
+  .detail .date-month,
+  .detail .date-year { margin-right: -0.14em; }
   .date-side:first-child { padding-right: 12px; margin-right: -0.14em; }
   .date-side:last-child { padding-left: 12px; }
   .detail .date-day { font-size: 3rem; padding: 8px 16px; }
